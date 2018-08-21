@@ -18,7 +18,6 @@ With Scrubit, one simply choses the goods he/she wants to buy and gets redirecte
 The purpose of Scrubit is to make the shopping in Skrubben more efficient. The application also strengthens the status of IT-sektionen outwards. 
 
 
-
 ### Snapshot of the webstore:
 
 ![dm](https://github.com/JohanWindahl/scrubIT-JavaClient/blob/master/img/store1.png)
