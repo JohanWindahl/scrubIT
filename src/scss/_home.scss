@@ -1,0 +1,369 @@
+html, body {
+  height: 100%;
+}
+
+
+
+// image overlay
+.img-overlay {
+  z-index: -1;
+  //TODO remove overlay?
+  background-color: rgba(255, 255, 255, 0);
+
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+// image background cover
+.img-bgnd {
+  z-index: -100;
+
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  filter:blur(5px);
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+
+// top container
+.fixed-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+.top-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $scnd-theme-color;
+  padding: 10px;
+  margin: auto;
+  //box-shadow: 0 10px 100000px 100px #FAFAFA;
+  flex-direction: row-reverse;
+  border-bottom: solid 1px #cbcbcb;
+}
+
+#main-logo {
+  margin: 10px auto 10px auto;
+  width: 100px;
+  height: 32px;
+  //flex: 1;
+  transition: all 250ms ease;
+  opacity: 1;
+  //transform: scale(0.5);
+}
+
+// search-bar, filtering
+.search-bar {
+  background-color: $scnd-theme-color;
+  display: block;
+  width: 60%;
+  text-align: center;
+  border-radius: 40px;
+  margin-right: 10px;
+  border: solid 2px $pay-button-bgnd-color;
+  height: 35px;
+  padding: 5px;
+  font-size: 16px;
+  //font-style: italic;
+  transition: all 300ms ease;
+  //-webkit-transition: all 300ms ease;
+  //-moz-transition: all 300ms ease;
+  //-o-transition: all 300ms ease;
+}
+
+.search-bar:focus {
+  outline: 0;
+  box-shadow: 0 0 15px $slacker-color;
+  -webkit-box-shadow: 0 0 15px $slacker-color;
+  -webkit-appearance: none;
+  width: 80%;
+
+  + #main-logo {
+    //visibility: hidden;
+    filter: blur(5px);
+    transform: scale(0.7);
+    //opacity: 0;
+    //width: 0;
+  }
+}
+
+// make placeholder disappear on focus in search-bar
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* Firefox 18- */
+input:focus::-moz-placeholder { color:transparent; } /* Firefox 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* oldIE ;) */
+
+// search-bar placeholder styling
+.search-bar::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $slacker-color;
+}
+.search-bar::-moz-placeholder { /* Firefox 19+ */
+  color: $slacker-color;
+}
+.search-bar:-ms-input-placeholder { /* IE 10+ */
+  color: $slacker-color;
+}
+.search-bar:-moz-placeholder { /* Firefox 18- */
+  color: $slacker-color;
+}
+
+/* ------ items -------- */
+
+/* ------------------------- */
+
+@media screen and (max-width: 768px) {
+
+  // ------- items on small screen ----------
+
+  li.item-info {
+    list-style: none;
+    color: $slacker-color;
+    //white-space: nowrap;
+  }
+
+  .item-price {
+    color: $main-text-color;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .items-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+
+
+  .items-flex {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 3px;
+    margin: 5px;
+    padding: 15px;
+    flex-direction: row;
+    width: 90%;
+    border: solid $slacker-color 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  // This class is added dynamically through React
+  .items-flex.is-active {
+    border: solid $scnd-bar-color 3px;
+  }
+
+  .items-flex-item {
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+  }
+
+  .item-info-container {
+    text-align: center;
+  }
+
+  .item-info-container img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quantity-holder {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      color: $slacker-color;
+      margin-left: 20px;
+      margin-right: 20px;
+      outline: none;
+      font-size: 35px;
+      font-weight: bold;
+      transition: all 800ms ease;
+    }
+
+    button {
+      background: $pay-button-bgnd-color;
+      cursor: pointer;
+      -webkit-border-radius: 37px;
+      -moz-border-radius: 37px;
+      border-radius: 37px;
+      border: none;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 27px;
+      padding: 9px 15px 9px 15px;
+      text-decoration: none;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+
+    .minus-btn {
+      padding-left: 17px;
+    }
+
+    .plus-btn {
+      padding-left: 17px;
+      padding-top: 10px;
+    }
+  }
+  // ----------------------------------------
+
+}
+
+@media screen and (min-width: 768px) {
+
+  // ------- items on small screen ----------
+
+  li.item-info {
+    list-style: none;
+    font-size: 25px;
+    margin-top: 10px;
+    color: $slacker-color;
+    //white-space: nowrap;
+  }
+
+  .item-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    border-bottom: solid $slacker-color 2px;
+    color: $main-text-color;
+    font-weight: bold;
+  }
+
+  .items-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+
+  .items-flex {
+    display: -webkit-flex;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 3px;
+    margin: 30px;
+    padding: 15px;
+    width: 200px;
+    height: 280px;
+    flex-direction: column;
+    border: solid $slacker-color 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: border 300ms ease;
+  }
+
+  // This class is added dynamically through React
+  .items-flex.is-active {
+    border: solid $scnd-bar-color 3px;
+  }
+
+  .items-flex-item {
+    -webkit-flex: 1; /* Safari 6.1+ */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1;
+    margin: 10px;
+  }
+
+  div.item-info-container {
+    text-align: center;
+  }
+
+  .quantity-holder {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      color: $slacker-color;
+      margin-left: 20px;
+      margin-right: 20px;
+      outline: none;
+      font-size: 35px;
+      font-weight: bold;
+      transition: all 800ms ease;
+    }
+
+    button {
+      background: $pay-button-bgnd-color;
+      cursor: pointer;
+      -webkit-border-radius: 37;
+      -moz-border-radius: 37;
+      border-radius: 37px;
+      border: none;
+      font-family: Arial;
+      color: #ffffff;
+      font-size: 27px;
+      padding: 9px 15px 9px 15px;
+      text-decoration: none;
+    }
+
+    button:focus {
+      outline: 0;
+    }
+
+    .minus-btn {
+      padding-left: 17px;
+    }
+
+    .plus-btn {
+      padding-left: 17px;
+      padding-top: 10px;
+    }
+  }
+  // ----------------------------------------
+
+  // search bar on small screen
+  .search-bar {
+    margin-right: 30px;
+    width: 70%;
+    font-size: 15px;
+  }
+
+  #main-logo {
+    width: 150px;
+    height: 48px;
+  }
+}

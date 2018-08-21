@@ -1,0 +1,40 @@
+@import "variables";
+
+// components
+@import "home";
+@import "status-bar";
+
+// react-loader styling
+$my-brand-color: $slacker-color;
+$primary-color: $my-brand-color;
+@import '../../node_modules/loaders.css/src/animations/ball-scale-ripple-multiple.scss';
+
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  display: block;
+}
+// ---------------------
+
+html {
+  background: $background-color;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Book';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bebas Neue Book'), url('../fonts/bebas-neue-book/BebasNeue Book.woff') format('woff');
+}
+
+* {
+  font-family: "Bebas Neue Book";
+  letter-spacing: 2px;
+  font-weight: bold;
+}
