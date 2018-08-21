@@ -2,7 +2,7 @@
 
 ### Tools
 - Customer application: React, React Native.
-- Admin application: Java, Java FX. [here](https://github.com/JohanWindahl/scrubIT-JavaClient)
+- [Admin application](https://github.com/JohanWindahl/scrubIT-JavaClient): Java, Java FX. 
 - Database management: Mongo DB, mLab.
 - Server side: Node js.
 - Cloud service: Heroku.
