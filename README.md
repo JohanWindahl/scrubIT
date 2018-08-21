@@ -1,7 +1,7 @@
 # Scrubit
 The main part of the project in the course Platform-Spanning Systems - 1DL620
 
-[link](https://scrubit.herokuapp.com/) to webapp.
+A [Webapp](https://scrubit.herokuapp.com/) for our local kiosk Skrubben.
 
 ### Tools
 - Customer application: React, React Native.
@@ -10,7 +10,6 @@ The main part of the project in the course Platform-Spanning Systems - 1DL620
 - Server side: Node js.
 - Cloud service: Heroku.
 - External API: Swish API.
-
 
 **Details:** The organization IT-sektionen at Uppsala University runs a venue for mostly IT-students, but also other students at the university. It is called Skrubben. There, students socialize, study and are provided with snacks. For buying the snacks, we created a web-shop, called Scrubit. 
 
