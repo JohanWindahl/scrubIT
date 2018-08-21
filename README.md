@@ -9,7 +9,7 @@ A [Webapp](https://scrubit.herokuapp.com/) for our local kiosk Skrubben.
 - Database management: Mongo DB, mLab.
 - Server side: Node js.
 - Cloud service: Heroku.
-- External API: Swish API.
+- External API: Swish API. 
 
 **Details:** The organization IT-sektionen at Uppsala University runs a venue for mostly IT-students, but also other students at the university. It is called Skrubben. There, students socialize, study and are provided with snacks. For buying the snacks, we created a web-shop, called Scrubit. 
 
